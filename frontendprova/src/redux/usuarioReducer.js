@@ -1,8 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import ESTADO from '../recursos/estado';
-
 const urlBase = 'http://localhost:4000/usuario';
-
 export const buscarUsuarios = createAsyncThunk('usuario/buscarUsuarios', async () => {
   try { 
       const resposta = await fetch(urlBase, { method: 'GET' });

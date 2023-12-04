@@ -9,11 +9,6 @@ export default function TabelaUsuarios(props) {
     const { estado, mensagem, usuarios } = useSelector(state => state.usuario);
     const dispatch = useDispatch();
 
-
-    function editarUsuario(usuario) {
-        // Lógica para editar usuário
-    }
-
     useEffect(() => {
         dispatch(buscarUsuarios());
     }, [dispatch]);
@@ -54,12 +49,6 @@ export default function TabelaUsuarios(props) {
                                     <tr key={usuario.id}>
                                         <td>{usuario.id}</td>
                                         <td>{usuario.nome}</td>
-                                        <td>
-                                            <Button onClick={() => {
-                                                editarUsuario(usuario);
-                                            }} variant="warning">
-                                            </Button>
-                                        </td>
                                     </tr>
                                 );
                             })

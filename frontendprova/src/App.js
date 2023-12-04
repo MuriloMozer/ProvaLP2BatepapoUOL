@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter} from 'react-router-dom';
-import Menu from './componentes/Menu.jsx';
+import TelaMenu from "./telasCadastro/TelaMenu";
 import TelaCadastroUsuario from './telasCadastro/TelaCadastroUsuario.jsx';
 import TelaBatePapo from './telasCadastro/TelaBatePapo.jsx';
 import store from "./redux/store";
@@ -10,10 +10,10 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-      <Menu />
         <Routes>
               <Route path="/cadastro-usuarios" element={<TelaCadastroUsuario/>} />
               <Route path="/bate-papo" element={<TelaBatePapo/>} />
+              <Route path="/" element={<TelaMenu />} />
         </Routes>
       </BrowserRouter>
     </Provider>
